@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bones and All</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Bones and All</h1>
+        <p>Um romance sombrio sobre amor, sobrevivência e identidade.</p>
+    </header>
+
+    <nav>
+        <a href="#sinopse">Sinopse</a>
+        <a href="#personagens">Personagens</a>
+        <a href="#curiosidades">Curiosidades</a>
+    </nav>
+
+    <main>
+
+        <section id="sinopse">
+            <h2>Sinopse</h2>
+            <p>
+                <strong>Bones and All</strong> é um filme de drama e romance com
+                elementos de terror dirigido por Luca Guadagnino. A história acompanha
+                Maren, uma jovem que vive à margem da sociedade e embarca em uma
+                jornada pelos Estados Unidos, onde conhece Lee. Juntos, eles enfrentam
+                desafios enquanto tentam encontrar um lugar onde possam pertencer.
+            </p>
+        </section>
+
+        <section id="personagens">
+            <h2>Personagens Principais</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Maren</h3>
+                    <p>
+                        Jovem em busca de respostas sobre seu passado e sobre quem
+                        realmente é.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Lee</h3>
+                    <p>
+                        Um viajante solitário que acompanha Maren em sua jornada,
+                        criando uma forte conexão com ela.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Curiosidades</h2>
+
+            <table>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Informação</th>
+                </tr>
+
+                <tr>
+                    <td>Direção</td>
+                    <td>Luca Guadagnino</td>
+                </tr>
+
+                <tr>
+                    <td>Lançamento</td>
+                    <td>2022</td>
+                </tr>
+
+                <tr>
+                    <td>Gênero</td>
+                    <td>Drama, Romance e Terror</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Site criado para fins educacionais.</p>
+    </footer>
+
+</body>
+</html>
