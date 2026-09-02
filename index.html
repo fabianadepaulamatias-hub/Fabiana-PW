@@ -1,245 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-
-    <!-- Responsividade -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 Cartinhas</title>
 
-    <title>Minha Página</title>
-
-    <style>
-        /* ===== RESET ===== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            color: #222;
-        }
-
-        /* ===== CABEÇALHO ===== */
-
-        header {
-            background-color: #34495e;
-            color: white;
-
-            padding: 20px 40px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        header h1 {
-            font-size: 28px;
-        }
-
-        nav {
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== CONTEÚDO ===== */
-
-        main {
-            width: 90%;
-            max-width: 1200px;
-            margin: 40px auto;
-        }
-
-        main h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        /* ===== CARDS ===== */
-
-        .cards {
-            display: grid;
-
-            /* Computador: 4 produtos */
-            grid-template-columns: repeat(4, 1fr);
-
-            gap: 20px;
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 10px;
-
-            padding: 15px;
-
-            text-align: center;
-
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        .card img {
-            width: 100%;
-            height: 180px;
-
-            object-fit: cover;
-
-            border-radius: 8px;
-
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
-
-        .card p {
-            color: #666;
-            font-size: 15px;
-        }
-
-        /* ===== TABLET ===== */
-
-        @media (max-width: 800px) {
-
-            .cards {
-                /* Tablet: 2 produtos */
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-                text-align: center;
-            }
-
-        }
-
-        /* ===== CELULAR ===== */
-
-        @media (max-width: 500px) {
-
-            .cards {
-                /* Celular: 1 produto */
-                grid-template-columns: 1fr;
-            }
-
-            main {
-                width: 90%;
-            }
-
-            header {
-                padding: 20px;
-            }
-
-            header h1 {
-                font-size: 24px;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .card img {
-                height: 200px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="estilo.css">
 </head>
-
 <body>
 
-    <!-- ===== HEADER ===== -->
+    <h1>Minhas Cartinhas 💌</h1>
 
-    <header>
-        <h1>Minha Página</h1>
+    <main class="cartas">
 
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Produtos</a>
-        </nav>
-    </header>
+        <div class="carta">
+            <div class="icone">►</div>
+            <h2>anna julia</h2>
+            <p>Sei que você já não quer o meu amor
+Sei que você já não gosta de mim
+Eu sei que eu não sou quem você sempre sonhou
+Mas vou reconquistar o seu amor todo pra mim</p>
+             <button>acessar</button>
+        </div>
 
+        <div class="carta">
+            <div class="icone">☼</div>
+            <h2>Outra vida</h2>
+            <p>Talvez não seja nessa vida ainda
+Mas você ainda vai ser a minha vida
+Sem ter mais mentiras pra me ver
+Sem amor antigo pra esquecer
+Sem os teus amigos pra esconder
+Pode crer, que tudo vai dar certo</p>
+            <button>acessar</button>
+        </div>
 
-    <!-- ===== PRODUTOS ===== -->
+        <div class="carta">
+            <div class="icone">⭐</div>
+            <h2>Ultimo romance</h2>
+            <p>Ah, vai, me diz o que é o sufoco
+Que eu te mostro alguém
+A fim de te acompanhar
+E se o caso for de ir à praia
+Eu levo essa casa numa sacola</p>
+            <button>acessar</button>
+        </div>
 
-    <main>
+        <div class="carta">
+            <div class="icone">🦋</div>
+            <h2>Melhor Lugar</h2>
+            <p>Se fosse por mim, eu ficava, mas vê como tudo lá fora mudou?
+O tempo passou feito um louco, quebrando as vidraças, e a gente ficou
+Aqui
+Sem ter bem pra onde ir
+Por medo ou preguiça
+Aqui, ilhados por nós
+Sequer rastreados por nenhum radar
+Aqui parecia ser o melhor lugar.</p>
+            <button>Leia mais</button>
+        </div>
 
-        <h2>Meus Produtos</h2>
+        <div class="carta">
+            <div class="icone">🌷</div>
+            <h2>ta pedindo toma</h2>
+            <p>Hoje tá tudo precificado
+Qual que é o trecho? Qual que é o preço? Quanto é o baseado?
+Só saio de casa preparado
+Com um qualquer no bolso pra arrastar uma pro barraco
 
-        <section class="cards">
+iPhone 17 ela só ganha dos playboy
+Na favela, é só coro dentro do Corolla Cross
+Diz que ela cobra uma nota, mas nunca cobrou de nóis
+Na favela, é só coro dentro do Corolla Cross.</p>
+            <button>Leia mais</button>
+        </div>
 
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
-                    alt="Praia">
+        <div class="carta">
+            <div class="icone">✨</div>
+            <h2>Cartinha 6</h2>
+            <p>Continue espalhando sua energia boa por onde passar.</p>
+            <button>Leia mais</button>
+        </div>
 
-                <h3>Produto 1</h3>
+        <div class="carta">
+            <div class="icone">💫</div>
+            <h2>Cartinha 7</h2>
+            <p>Você é capaz de conquistar muito mais do que imagina.</p>
+            <button>Leia mais</button>
+        </div>
 
-                <p>
-                    Descrição do primeiro produto.
-                </p>
-            </div>
+        <div class="carta">
+            <div class="icone">🌙</div>
+            <h2>Cartinha 8</h2>
+            <p>Que nunca faltem motivos para sorrir.</p>
+            <button>Leia mais</button>
+        </div>
 
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1511497584788-876760111969"
-                    alt="Natureza">
-
-                <h3>Produto 2</h3>
-
-                <p>
-                    Descrição do segundo produto.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
-                    alt="Paisagem">
-
-                <h3>Produto 3</h3>
-
-                <p>
-                    Descrição do terceiro produto.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
-                    alt="Floresta">
-
-                <h3>Produto 4</h3>
-
-                <p>
-                    Descrição do quarto produto.
-                </p>
-            </div>
-
-        </section>
+        <div class="carta">
+            <div class="icone">💌</div>
+            <h2>Cartinha 9</h2>
+            <p>Essa última cartinha é especialmente para você!</p>
+            <button>Leia mais</button>
+        </div>
 
     </main>
 
 </body>
-
 </html>
