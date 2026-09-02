@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsividade -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Página</title>
+
+    <style>
+        /* ===== RESET ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #222;
+        }
+
+        /* ===== CABEÇALHO ===== */
+
+        header {
+            background-color: #34495e;
+            color: white;
+
+            padding: 20px 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== CONTEÚDO ===== */
+
+        main {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        main h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* ===== CARDS ===== */
+
+        .cards {
+            display: grid;
+
+            /* Computador: 4 produtos */
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+
+            padding: 15px;
+
+            text-align: center;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+
+            object-fit: cover;
+
+            border-radius: 8px;
+
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* ===== TABLET ===== */
+
+        @media (max-width: 800px) {
+
+            .cards {
+                /* Tablet: 2 produtos */
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+        }
+
+        /* ===== CELULAR ===== */
+
+        @media (max-width: 500px) {
+
+            .cards {
+                /* Celular: 1 produto */
+                grid-template-columns: 1fr;
+            }
+
+            main {
+                width: 90%;
+            }
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .card img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+
+    <header>
+        <h1>Minha Página</h1>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Produtos</a>
+        </nav>
+    </header>
+
+
+    <!-- ===== PRODUTOS ===== -->
+
+    <main>
+
+        <h2>Meus Produtos</h2>
+
+        <section class="cards">
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                    alt="Praia">
+
+                <h3>Produto 1</h3>
+
+                <p>
+                    Descrição do primeiro produto.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1511497584788-876760111969"
+                    alt="Natureza">
+
+                <h3>Produto 2</h3>
+
+                <p>
+                    Descrição do segundo produto.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                    alt="Paisagem">
+
+                <h3>Produto 3</h3>
+
+                <p>
+                    Descrição do terceiro produto.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b"
+                    alt="Floresta">
+
+                <h3>Produto 4</h3>
+
+                <p>
+                    Descrição do quarto produto.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
