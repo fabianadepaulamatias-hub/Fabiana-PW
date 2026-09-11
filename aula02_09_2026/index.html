@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lumière | Moda & Estilo</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8f7f4;
+            color: #1d1d1d;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            height: 80px;
+            padding: 0 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f8f7f4;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8a6a4a;
+        }
+
+        .carrinho {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* BANNER PRINCIPAL */
+
+        .hero {
+            min-height: 650px;
+            padding: 70px 7%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 520px;
+        }
+
+        .destaque {
+            color: #8a6a4a;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 6vw, 82px);
+            line-height: 0.95;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .descricao {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #1d1d1d;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            background: #8a6a4a;
+        }
+
+        .hero-image {
+            height: 550px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* PRODUTOS */
+
+        .produtos {
+            padding: 100px 7%;
+            background: white;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo p {
+            color: #8a6a4a;
+            font-size: 12px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .titulo h2 {
+            font-size: 38px;
+        }
+
+        .grid-produtos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .imagem-produto {
+            height: 390px;
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .imagem-produto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .produto:hover img {
+            transform: scale(1.05);
+        }
+
+        .produto h3 {
+            margin-top: 18px;
+            font-size: 17px;
+        }
+
+        .categoria {
+            color: #888;
+            font-size: 13px;
+            margin: 7px 0;
+        }
+
+        .preco {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .produto button {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #222;
+            background: transparent;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .produto button:hover {
+            background: #222;
+            color: white;
+        }
+
+        /* SOBRE */
+
+        .sobre {
+            padding: 100px 7%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            background: #e9e3da;
+        }
+
+        .sobre-titulo {
+            color: #8a6a4a;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        .sobre h2 {
+            font-size: 45px;
+            margin-top: 15px;
+        }
+
+        .sobre-descricao {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            padding: 50px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1d1d1d;
+            color: white;
+        }
+
+        footer p {
+            color: #aaa;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVIDADE */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 450px;
+            }
+
+            .grid-produtos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sobre {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            header {
+                padding: 0 5%;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .produtos {
+                padding: 70px 5%;
+            }
+
+            .grid-produtos {
+                grid-template-columns: 1fr;
+            }
+
+            .imagem-produto {
+                height: 450px;
+            }
+
+            .sobre {
+                padding: 70px 5%;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            LUMIÈRE
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="carrinho">
+            🛒
+        </div>
+
+    </header>
+
+
+    <!-- PRINCIPAL -->
+
+    <main>
+
+        <!-- BANNER -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <p class="destaque">
+                    NOVA COLEÇÃO 2026
+                </p>
+
+                <h1>
+                    Seu estilo.<br>
+                    Seu momento.
+                </h1>
+
+                <p class="descricao">
+                    Descubra peças que combinam com você.
+                    Moda moderna, confortável e cheia de personalidade.
+                </p>
+
+                <a href="#produtos" class="botao">
+                    Comprar agora
+                </a>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+                    alt="Coleção de roupas">
+
+            </div>
+
+        </section>
+
+
+        <!-- PRODUTOS -->
+
+        <section class="produtos" id="produtos">
+
+            <div class="titulo">
+
+                <p>CONFIRA</p>
+
+                <h2>
+                    Produtos em destaque
+                </h2>
+
+            </div>
+
+
+            <div class="grid-produtos">
+
+
+                <!-- PRODUTO 1 -->
+
+                <div class="produto">
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+                            alt="Camiseta">
+
+                    </div>
+
+                    <h3>
+                        Camiseta Essential
+                    </h3>
+
+                    <p class="categoria">
+                        Camisetas
+                    </p>
+
+                    <strong class="preco">
+                        R$ 89,90
+                    </strong>
+
+                    <button>
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUTO 2 -->
+
+                <div class="produto">
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
+                            alt="Calça jeans">
+
+                    </div>
+
+                    <h3>
+                        Calça Denim
+                    </h3>
+
+                    <p class="categoria">
+                        Calças
+                    </p>
+
+                    <strong class="preco">
+                        R$ 159,90
+                    </strong>
+
+                    <button>
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUTO 3 -->
+
+                <div class="produto">
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=600&q=80"
+                            alt="Vestido">
+
+                    </div>
+
+                    <h3>
+                        Vestido Aura
+                    </h3>
+
+                    <p class="categoria">
+                        Vestidos
+                    </p>
+
+                    <strong class="preco">
+                        R$ 189,90
+                    </strong>
+
+                    <button>
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+
+                <!-- PRODUTO 4 -->
+
+                <div class="produto">
+
+                    <div class="imagem-produto">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80"
+                            alt="Jaqueta">
+
+                    </div>
+
+                    <h3>
+                        Jaqueta Urban
+                    </h3>
+
+                    <p class="categoria">
+                        Jaquetas
+                    </p>
+
+                    <strong class="preco">
+                        R$ 229,90
+                    </strong>
+
+                    <button>
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section class="sobre" id="sobre">
+
+            <div>
+
+                <p class="sobre-titulo">
+                    SOBRE A LUMIÈRE
+                </p>
+
+                <h2>
+                    Moda para todos os momentos.
+                </h2>
+
+            </div>
+
+            <p class="sobre-descricao">
+
+                Criamos roupas para quem gosta de expressar
+                sua personalidade. Nossa proposta é unir
+                conforto, qualidade e estilo em cada peça.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer id="contato">
+
+        <div class="logo">
+            LUMIÈRE
+        </div>
+
+        <p>
+            © 2026 Lumière. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
