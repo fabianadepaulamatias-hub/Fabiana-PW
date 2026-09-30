@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Missão RPG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚔️ Gerador de Missão RPG</h1>
+
+    <label>Nome do personagem:</label>
+    <input type="text" id="nome" placeholder="Digite o nome">
+
+    <label>Idade:</label>
+    <input type="number" id="idade" placeholder="Digite a idade">
+
+    <label>Classe:</label>
+    <select id="classe">
+        <option value="">Escolha</option>
+        <option value="mago">Mago</option>
+        <option value="guerreiro">Guerreiro</option>
+        <option value="arqueiro">Arqueiro</option>
+        <option value="curandeiro">Curandeiro</option>
+    </select>
+
+    <label>Nível de risco:</label>
+    <select id="risco">
+        <option value="1">Baixo</option>
+        <option value="2">Médio</option>
+        <option value="3">Alto</option>
+    </select>
+
+    <button onclick="gerarMissao()">Gerar missão</button>
+
+    <div id="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
